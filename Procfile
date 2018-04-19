@@ -1,1 +1,1 @@
-web: python -m src.app
+web: python app.py
