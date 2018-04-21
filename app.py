@@ -25,6 +25,7 @@ def callback():
 
     # get request body as text
     body = request.get_data(as_text=True)
+    print("*****Input details in body*****")
     print(body)
     app.logger.info("Request body: " + body)
 
@@ -39,7 +40,8 @@ def callback():
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    print("Input Message In handle_message is >> " + event)
+    print("*****Input Message In handle_message*****")
+    print(event)
     message = TextSendMessage(text="Hello, world!")
     line_bot_api.reply_message(
         event.reply_token,
