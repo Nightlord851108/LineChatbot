@@ -10,6 +10,8 @@ from linebot.models import (
     MessageEvent, TextMessage, TextSendMessage, ImageSendMessage
 )
 
+from src.main import getMessage
+
 app = Flask(__name__)
 
 # Channel Access Token
@@ -37,11 +39,12 @@ def callback():
 
     return 'OK'
 
-
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     print("*****Input Message In handle_message*****")
     print(event)
+    inputMessage = event['message']['text']
+    replyMessage = getMessage(inputMessage)
     message = TextSendMessage(text="Hello, world!")
     line_bot_api.reply_message(
         event.reply_token,
