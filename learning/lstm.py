@@ -10,7 +10,7 @@ class TrainingModel:
         self.model = Sequential()
 
     def build(self):
-        self.model.add(Embedding(output_dim=32, input_dim=1000, input_length=9))
+        self.model.add(Embedding(output_dim=32, input_dim=150, input_length=9))
         self.model.add(Dropout(0.2))
         self.model.add(LSTM(32))
         self.model.add(Dense(units=256, activation='relu'))
