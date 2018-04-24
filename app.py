@@ -43,7 +43,7 @@ def callback():
 def handle_message(event):
     print("*****Input Message In handle_message*****")
     print(event)
-    inputMessage = event['message']['text']
+    inputMessage = event.message.text
     ms = Message(inputMessage)
     replyMessage = ms.getOutput()
     message = TextSendMessage(text=rerply)
