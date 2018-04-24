@@ -1,6 +1,6 @@
 {
     "C/C++": "I'm currently TA of object-oriented programming course, using C++ language, of Taipei Tech. ",
+    "Javascript": "I had worked with a team to develop a shopping website with javascript and Node.js. Currently, I'm using javascript to handle the view of GeometrA and connect to python server via Restful API",
     "Java": "I attended a workshop in NTU few weeks ago, and I've wrote a small library management system with Java as a project",
-    "Python": "I'm very family with python since I'm currently using Python as the primery language of my college project GeometrA -- you can ask more detail about it to me -- and, as a result, I've learned how to build a web server writen in Python, it's an important technique since python is now the most popular and useful language in the world. Besides, I've also learned to CI server for python automated testing. ",
-    "Javascript": "I had worked with a team to develop a shopping website with javascript and Node.js. Currently, I'm using javascript to handle the view of GeometrA and connect to python server via Restful API"
+    "Python": "I'm very family with python since I'm currently using Python as the primery language of my college project GeometrA -- you can ask more detail about it to me -- and, as a result, I've learned how to build a web server writen in Python, it's an important technique since python is now the most popular and useful language in the world. Besides, I've also learned to CI server for python automated testing. "
 }

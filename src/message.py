@@ -13,10 +13,10 @@ class Message:
     def __init__(self, input):
         self._input = input.lower()
         self.languageList = {
-            'C/C++': [' c ', 'c++', 'c/c++'],
-            'Java': [' java '],
-            'Python': ['python'],
-            'Javascript': ['javascript', 'js']
+            'C/C++': [' c ', 'c++', 'c/c++', ' c.', ' c?'],
+            'Javascript': ['javascript', 'js'],
+            'Java': ['java'],
+            'Python': ['python']
         }
         self.projectList = {
             'GeometrA': ['geometra'],
