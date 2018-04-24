@@ -38,7 +38,7 @@ class TrainingModel:
         prediction = self.model.predict_classes(ask_final)
         return prediction
     #you should use json to turn the prediction(which means label) into its inside content
-
+    
 
 """
 You can get higher val_acc(which means validation_accuracy, it will use 10%(because validation_split)

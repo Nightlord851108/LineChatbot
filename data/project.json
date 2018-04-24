@@ -1,0 +1,4 @@
+{
+    "GeometrA": "GeometrA(https://github.com/NTUTVisualScript/GeometrA) is an open source image-based tool, developed by my college project team, which I am currently the scrum master of, for writing and executing acceptance tests for Android applications. It's writen in javascript and Python. We used Javascript to handle the view presentation, while Python handle the job of backend calculations. ",
+    "ezScrum": "ezScrum(https://github.com/ezScrum/ezScrum) is an open source tool developed by Software Systems Lab of Taipei Tech long time ago. It's the first project I enrolled when I first join the lab, I'd written automated acceptance test for ezScrum for a few monthes and found several bugs, even successfully fixed one my self. "
+}

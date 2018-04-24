@@ -10,7 +10,7 @@ from linebot.models import (
     MessageEvent, TextMessage, TextSendMessage, ImageSendMessage
 )
 
-from src.main import getMessage
+from src.message import Message
 
 app = Flask(__name__)
 
@@ -44,8 +44,9 @@ def handle_message(event):
     print("*****Input Message In handle_message*****")
     print(event)
     inputMessage = event['message']['text']
-    replyMessage = getMessage(inputMessage)
-    message = TextSendMessage(text="Hello, world!")
+    ms = Message(inputMessage)
+    replyMessage = ms.getOutput()
+    message = TextSendMessage(text=rerply)
     line_bot_api.reply_message(
         event.reply_token,
         message)
