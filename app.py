@@ -19,6 +19,14 @@ line_bot_api = LineBotApi('ZtmdrSOL3jYcjtNFpoAWNnmFbRivHNUR8U+w3ftRnNF0ODl5G5w+a
 # Channel Secret
 handler = WebhookHandler('62eb9886562f78d9402b8ba72a4f57f4')
 
+
+def checkKey(message):
+    keywordList = ['Language', 'profile', 'project', 'team work', 'Lab']
+    for i in keywordList:
+        if i == message:
+            return True
+    return False
+
 # 監聽所有來自 /callback 的 Post Request
 @app.route("/callback", methods=['POST'])
 def callback():
@@ -29,6 +37,8 @@ def callback():
     body = request.get_data(as_text=True)
     print("*****Input details in body*****")
     print(body)
+    if (checkKey(body.event.message.text)):
+        return 
     app.logger.info("Request body: " + body)
 
     # handle webhook body
