@@ -43,6 +43,7 @@ class Message:
     def getOutput(self):
         type, key = self.checkInfo()
         if type == 'natural':
+            from keras.preprocessing.text import Tokenizer
             train = TrainingModel()
             train.build()
             token = Tokenizer(num_words=150)
