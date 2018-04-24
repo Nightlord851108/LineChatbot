@@ -38,7 +38,7 @@ def callback():
     body = request.get_data(as_text=True)
     print("*****Input details in body*****")
     print(body)
-    if (checkKey(json.loads(body).events.message.text)):
+    if (checkKey(json.loads(body)['events']['message']['text'])):
         return
     app.logger.info("Request body: " + body)
 
