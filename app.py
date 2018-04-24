@@ -39,7 +39,7 @@ def callback():
     print("*****Input details in body*****")
     print(body)
     if (checkKey(json.loads(body)['events'][0]['message']['text'])):
-        return
+        return 'OK'
     app.logger.info("Request body: " + body)
 
     # handle webhook body
