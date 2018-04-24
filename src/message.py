@@ -44,9 +44,11 @@ class Message:
         type, key = self.checkInfo()
         if type == 'natural':
             from keras.preprocessing.text import Tokenizer
+            from learning.data import getTrainData
             train = TrainingModel()
             train.build()
             token = Tokenizer(num_words=150)
+            getTrainData(token)
             train.load()
             key = train.askQuestion(token, [key])
         with open('./data/' + type + '.json', 'r') as f:
