@@ -1,4 +1,5 @@
 from flask import Flask, request, abort
+import json
 
 from linebot import (
     LineBotApi, WebhookHandler
@@ -37,8 +38,8 @@ def callback():
     body = request.get_data(as_text=True)
     print("*****Input details in body*****")
     print(body)
-    if (checkKey(body.event.message.text)):
-        return 
+    if (checkKey(json.loads(body).events.message.text)):
+        return
     app.logger.info("Request body: " + body)
 
     # handle webhook body
