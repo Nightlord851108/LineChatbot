@@ -48,7 +48,7 @@ class Message:
             train.build()
             token = Tokenizer(num_words=150)
             train.load()
-            key = train.askQuestion(token, key)
+            key = train.askQuestion(token, [key])
         with open('./data/' + type + '.json', 'r') as f:
             data = json.loads(f.read())
         return data[key]
