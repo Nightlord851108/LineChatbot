@@ -53,4 +53,4 @@ class Message:
             key = train.askQuestion(token, [key])
         with open('./data/' + type + '.json', 'r') as f:
             data = json.loads(f.read())
-        return data[key]
+        return data[str(key)]
